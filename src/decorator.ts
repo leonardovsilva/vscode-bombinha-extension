@@ -3,8 +3,8 @@ import * as vscode from 'vscode';
 export function activateDecorator() {
 
     let timeout: NodeJS.Timer | undefined = undefined;
-    // create a decorator type that we use to decorate small numbers
-    const bombrDecorationType = vscode.window.createTextEditorDecorationType({
+
+    const bombDecorationType = vscode.window.createTextEditorDecorationType({
 
         overviewRulerLane: vscode.OverviewRulerLane.Right,
         light: {
@@ -36,7 +36,7 @@ export function activateDecorator() {
             bombMatchDecorator.push(decoration);
   
         }
-        activeEditor.setDecorations(bombrDecorationType, bombMatchDecorator);
+        activeEditor.setDecorations(bombDecorationType, bombMatchDecorator);
     }
 
     function triggerUpdateDecorations() {
