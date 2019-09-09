@@ -25,8 +25,6 @@ function updateStatusBarItem(): void {
 
 	var selection = editor.selection;
 	var text = editor.document.getText(selection);
-
-	
 	
 	if (!opened && text === bombinhaMatch){
 		BombPanel.createOrShow();
